@@ -11,27 +11,32 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container">
-    <!-- Begin Stats Preview Card Component -->
-    <div class="card">
-      <div class="card-image"></div>
+  <main>
+
+    <div class="preview-card">
+      <div class="card-image-box">
+        <picture>
+          <source media="(min-width: 600px)" srcset="./images/image-header-desktop.jpg">
+          <img src="./images/image-header-mobile.jpg" alt="" class="stats-card-image">
+        </picture>
+      </div>
       <div class="card-content">
-        <h1>Get insights that help your business grow.</h1>
+        <h1>Get <span class="card-title__accent">insights</span> that help your business grow.</h1>
         <p>Discover the benefits of data analytics and make better decisions regarding revenue, customer experience, and overall efficiency.</p>
-        <ul class="card-content_stats-list">
-          <li>
-            <span>10k+</span> <span>companies</span>
+        <ul class="card-content__stats-list">
+          <li class="stats-list-item">
+            <span class="card-stat__number">10k+</span> <span class="card-stat__label">companies</span>
           </li>
-          <li>
-            <span>314</span> <span>templates</span>
+          <li class="stats-list-item">
+            <span class="card-stat__number">314</span> <span class="card-stat__label">templates</span>
           </li>
-          <li>
-            <span>12m+</span> <span>queries</span>
+          <li class="stats-list-item">
+            <span class="card-stat__number">12M+</span> <span class="card-stat__label">queries</span>
           </li>
         </ul>
       </div>
     </div>
-    <!-- End Stats Preview Card Component -->
-  </div>
+
+  </main>
 </body>
 </html>
