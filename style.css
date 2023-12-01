@@ -35,7 +35,7 @@ Date: November 2023
 
 }
 
-@media (min-width: 600px) {
+@media (min-width: 48rem) {
   :root {
     --fs-700: 2.25rem;
   }
@@ -102,24 +102,29 @@ body {
 
 /* Card Styles */
 
-.preview-card {
+.card {
   margin-inline: 1.5rem;
   border-radius: var(--br-soft);
   display: grid;
-  max-width: 69.375rem;
+  max-width: 30rem;
   background: var(--clr-desat-dark-blue);
-  text-align: center;
   overflow: hidden;
 }
 
-@media (min-width: 600px) {
-  .preview-card {
 
-  }
+
+.card-image-box {
+  background: var(--clr-soft-violet);
+}
+
+.card-image {
+  mix-blend-mode: multiply;
+  opacity: 0.75;
 }
 
 .card-content {
   padding: 2rem;
+  text-align: center;
 }
 
 .card-content h1 {
@@ -133,7 +138,8 @@ body {
 }
 
 .card-content p {
-  margin-bottom: 2.5rem;
+  margin: 0 auto 2.5rem auto;
+  /* max-width: 40ch; */
   color: var(--clr-transparent-white);
 }
 
@@ -161,6 +167,26 @@ body {
   text-transform: uppercase;
   letter-spacing: 0.0625rem;
   color: var(--clr-transparent-white-accent);
+}
+
+@media (min-width: 48rem) {
+  .card {
+    max-width: 69.375rem;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .card-image-box {
+    order: 1;
+  }
+
+  .card-content {
+    padding: 4.5rem 5rem 3.75rem 4.5rem;
+    text-align: left;
+  }
+
+  .card-content__stats-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 
