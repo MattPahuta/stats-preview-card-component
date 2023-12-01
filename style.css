@@ -9,10 +9,6 @@ Date: November 2023
 /* **************** */
 :root {
   /* FONTS */
-  /* 
-  font-family: 'Inter', sans-serif;
-  font-family: 'Lexend Deca', sans-serif;
-  */
   --ff-primary: 'Inter', sans-serif;
   --ff-accent: 'Lexend Deca', sans-serif;
   /* Font Sizes */
@@ -20,7 +16,6 @@ Date: November 2023
   --fs-500: 1.5rem;;
   --fs-400: 0.9375rem;
   --fs-300: 0.75rem;
-
   /* COLORS*/
   /* Primary */
   --clr-extra-dark-blue: hsla(233, 49%, 7%, 1);
@@ -32,7 +27,6 @@ Date: November 2023
   --clr-transparent-white-accent: hsla(0, 0%, 100%, 0.6);
   /* Border radius */
   --br-soft: 0.5rem;
-
 }
 
 @media (min-width: 48rem) {
@@ -83,7 +77,6 @@ body {
   min-height: 100vh;
   display: grid;
   place-items: center;
-
   font-family: var(--ff-primary);
   font-size: var(--fs-400);
   line-height: 1.6;
@@ -91,17 +84,7 @@ body {
   color: var(--clr-white);
 }
 
-/* @media (min-width: 600px) {
-  body {
-    min-height: 100vh;
-    display: grid;
-    place-items: center;
-  }
-} */
-
-
 /* Card Styles */
-
 .card {
   margin-inline: 1.5rem;
   border-radius: var(--br-soft);
@@ -111,18 +94,26 @@ body {
   overflow: hidden;
 }
 
-
-
 .card-image-box {
   background: var(--clr-soft-violet);
 }
 
+.card-image-box picture {
+  height: 100%;
+}
+
 .card-image {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
   mix-blend-mode: multiply;
   opacity: 0.75;
 }
 
 .card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 2rem;
   text-align: center;
 }
@@ -138,11 +129,10 @@ body {
 }
 
 .card-content p {
-  margin: 0 auto 2.5rem auto;
-  /* max-width: 40ch; */
+  margin-bottom: 2.5rem;
+  max-width: 40ch;
   color: var(--clr-transparent-white);
 }
-
 
 .card-content__stats-list {
   list-style: none;
@@ -174,17 +164,16 @@ body {
     max-width: 69.375rem;
     grid-template-columns: 1fr 1fr;
   }
-
   .card-image-box {
     order: 1;
   }
-
   .card-content {
     padding: 4.5rem 5rem 3.75rem 4.5rem;
+    align-items: flex-start;
     text-align: left;
   }
-
   .card-content__stats-list {
+    align-self: stretch;
     grid-template-columns: repeat(3, 1fr);
   }
 }
