@@ -25,12 +25,12 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![](./images/project-ss.jpg)
 
 
 ### Links
 
-- [Solution URL](https://your-solution-url.com)
+- [Solution URL](https://www.frontendmentor.io/solutions/responsive-card-component-using-css-grid-and-flexbox-MBU9fMoTvH)
 - [Live Site URL](https://stats-preview-card-component-one-pi.vercel.app/)
 
 ## My process

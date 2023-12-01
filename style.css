@@ -174,7 +174,11 @@ body {
     align-items: flex-start;
     text-align: left;
   }
+  .card-content h1 {
+    margin-bottom: 1.5rem;
+  }
   .card-content__stats-list {
+    margin-top: auto;
     align-self: stretch;
     grid-template-columns: repeat(3, 1fr);
   }
