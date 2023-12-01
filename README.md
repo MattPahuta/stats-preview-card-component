@@ -12,7 +12,6 @@ This is a solution to the [Stats preview card component challenge on Frontend Me
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
   - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
 - [Author](#author)
 
 
@@ -32,7 +31,7 @@ Users should be able to:
 ### Links
 
 - [Solution URL](https://your-solution-url.com)
-- [Live Site URL](https://your-live-site-url.com)
+- [Live Site URL](https://stats-preview-card-component-one-pi.vercel.app/)
 
 ## My process
 
@@ -47,24 +46,45 @@ Users should be able to:
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+Using the ARIA list and listitem roles here comes back as a warning (unnecessary) from the W3C validator, but given I've removed the default list stying I'm not entirely sure the roles aren't completely useless. At the very least, I don't think it's hurting anything. And given that I'm trying to become more aware and consistent with my implementation of accessibility features in my code using the roles here helps build up some muscle memory.
 
-To see how you can add code snippets, see below:
+```html
+<ul role="list" class="card-content__stats-list">
+  <li role="listitem" class="stats-list-item">
+    <span class="card-stat__number">10k+</span> <span class="card-stat__label">companies</span>
+  </li>
+  <li role="listitem" class="stats-list-item">
+    <span class="card-stat__number">314</span> <span class="card-stat__label">templates</span>
+  </li>
+  <li role="listitem" class="stats-list-item">
+    <span class="card-stat__number">12M+</span> <span class="card-stat__label">queries</span>
+  </li>
+</ul> HTML code I'm proud of</h1>
+```
+
+Achieving the violet overlay effect on the image using a background color combined with mix-blend-mode and opacity properties seemed like the most straightforward way to go. Though, I'm sure there a few other routes I could have taken. 
 
 ```css
-.proud-of-this-css {
-  color: papayawhip;
+.card-image-box {
+  background: var(--clr-soft-violet);
+}
+
+.card-image-box picture {
+  height: 100%;
+}
+
+.card-image {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  mix-blend-mode: multiply;
+  opacity: 0.75;
 }
 ```
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-### Useful resources
-
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+This is the first of several component-type projects I plan on working on over the next several months. While most of my dedicated learning time is devoted to JavaScript, React, Node and Python, these types of projects (which are mostly CSS-based) seem like an efficient way to keep my CSS and design skills improving, or at least at a baseline.
 
 
 ## Author

@@ -18,13 +18,15 @@ Date: November 2023
   --fs-300: 0.75rem;
   /* COLORS*/
   /* Primary */
-  --clr-extra-dark-blue: hsla(233, 49%, 7%, 1);
-  --clr-desat-dark-blue: hsla(246, 38%, 16%, 1);
-  --clr-soft-violet: hsla(277, 64%, 61%, 1);
+  --clr-extra-dark-blue: hsl(233, 49%, 7%);
+  --clr-desat-dark-blue: hsl(246, 38%, 16%);
+  --clr-soft-violet: hsl(277, 64%, 61%);
   /* Neutral */
-  --clr-white: hsla(0, 0%, 100%, 1);
+  --clr-white: hsl(0, 0%, 100%);
   --clr-transparent-white: hsla(0, 0%, 100%, 0.75);
   --clr-transparent-white-accent: hsla(0, 0%, 100%, 0.6);
+  /* Box shadow */
+  --bs-primary: 0px 20px 20px -10px rgba(23, 25, 41, 0.20);
   /* Border radius */
   --br-soft: 0.5rem;
 }
@@ -92,6 +94,7 @@ body {
   max-width: 30rem;
   background: var(--clr-desat-dark-blue);
   overflow: hidden;
+  box-shadow: var(--bs-primary);
 }
 
 .card-image-box {
@@ -144,7 +147,6 @@ body {
 .card-content__stats-list li {
   display: grid;
 }
-
 
 .card-stat__number {
   font-size: var(--fs-500);
